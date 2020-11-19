@@ -18,6 +18,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
@@ -71,6 +72,13 @@ public class RubyOreBlock extends RubiesModElements.ModElement {
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
+			boolean biomeCriteria = false;
+			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("mountains")))
+				biomeCriteria = true;
+			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("snowy_mountains")))
+				biomeCriteria = true;
+			if (!biomeCriteria)
+				continue;
 			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, new OreFeature(OreFeatureConfig::deserialize) {
 				@Override
 				public boolean place(IWorld world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
@@ -87,7 +95,7 @@ public class RubyOreBlock extends RubiesModElements.ModElement {
 				if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
-			}), block.getDefaultState(), 3)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(1, 3, 3, 32))));
+			}), block.getDefaultState(), 1)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(1, 3, 3, 32))));
 		}
 	}
 }

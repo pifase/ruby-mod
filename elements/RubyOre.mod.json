@@ -95,14 +95,21 @@
     "spawnWorldTypes": [
       "Surface"
     ],
-    "restrictionBiomes": [],
+    "restrictionBiomes": [
+      {
+        "value": "mountains"
+      },
+      {
+        "value": "snowy_mountains"
+      }
+    ],
     "blocksToReplace": [
       {
         "value": "Blocks.STONE#0"
       }
     ],
     "frequencyPerChunks": 1,
-    "frequencyOnChunk": 3,
+    "frequencyOnChunk": 1,
     "minGenerateHeight": 3,
     "maxGenerateHeight": 32
   }
