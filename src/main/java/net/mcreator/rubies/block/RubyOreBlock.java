@@ -29,6 +29,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.rubies.item.RubyItem;
 import net.mcreator.rubies.RubiesModElements;
 
 import java.util.Random;
@@ -66,7 +67,7 @@ public class RubyOreBlock extends RubiesModElements.ModElement {
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
+			return Collections.singletonList(new ItemStack(RubyItem.block, (int) (1)));
 		}
 	}
 	@Override
