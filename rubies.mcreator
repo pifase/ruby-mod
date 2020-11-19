@@ -1,0 +1,96 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "Ruby",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby"
+    },
+    {
+      "name": "RubyBlock",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_block"
+    },
+    {
+      "name": "Rubytoblock",
+      "type": "recipe",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rubytoblock"
+    },
+    {
+      "name": "BlocktoRuby",
+      "type": "recipe",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blockto_ruby"
+    },
+    {
+      "name": "RubyOre",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_ore"
+    },
+    {
+      "name": "SmeltRuby",
+      "type": "recipe",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "smelt_ruby"
+    },
+    {
+      "name": "BlastRuby",
+      "type": "recipe",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blast_ruby"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "block.rubies.ruby_ore": "Ruby Ore",
+      "block.rubies.ruby_block": "Block of Ruby",
+      "item.rubies.ruby": "Ruby"
+    }
+  },
+  "workspaceSettings": {
+    "modid": "rubies",
+    "modName": "Rubies",
+    "version": "1.0.0",
+    "description": "Adds rubies to Minecraft",
+    "author": "pifase",
+    "websiteURL": "https://mcreator.net",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.15.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.rubies",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202000546519
+}

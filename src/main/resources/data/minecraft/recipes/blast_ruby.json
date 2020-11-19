@@ -1,0 +1,12 @@
+{
+  "group": "rubies",
+  "type": "minecraft:blasting",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "rubies:ruby_ore"
+  },
+  "result": {
+    "item": "rubies:ruby"
+  }
+}

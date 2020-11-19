@@ -1,0 +1,42 @@
+{
+  "group": "rubies",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "rubies:ruby"
+    },
+    "1": {
+      "item": "rubies:ruby"
+    },
+    "2": {
+      "item": "rubies:ruby"
+    },
+    "3": {
+      "item": "rubies:ruby"
+    },
+    "4": {
+      "item": "rubies:ruby"
+    },
+    "5": {
+      "item": "rubies:ruby"
+    },
+    "6": {
+      "item": "rubies:ruby"
+    },
+    "7": {
+      "item": "rubies:ruby"
+    },
+    "8": {
+      "item": "rubies:ruby"
+    }
+  },
+  "result": {
+    "item": "rubies:ruby_block",
+    "count": 1
+  }
+}

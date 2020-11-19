@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "rubies:blocks/ruby_block",
+    "up": "rubies:blocks/ruby_block",
+    "north": "rubies:blocks/ruby_block",
+    "east": "rubies:blocks/ruby_block",
+    "south": "rubies:blocks/ruby_block",
+    "west": "rubies:blocks/ruby_block",
+    "particle": "rubies:blocks/ruby_block"
+  }
+}
