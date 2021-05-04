@@ -74,6 +74,10 @@
       "item.rubies.ruby": "Ruby"
     }
   },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
   "workspaceSettings": {
     "modid": "rubies",
     "modName": "Rubies",
@@ -92,5 +96,5 @@
     "modElementsPackage": "net.mcreator.rubies",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000546519
+  "mcreatorVersion": 202100118117
 }

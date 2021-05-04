@@ -15,10 +15,8 @@ import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.IWorldReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
@@ -58,11 +56,6 @@ public class RubyOreBlock extends RubiesModElements.ModElement {
 		}
 
 		@Override
-		public boolean isBeaconBase(BlockState state, IWorldReader world, BlockPos pos, BlockPos beacon) {
-			return true;
-		}
-
-		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
@@ -73,13 +66,6 @@ public class RubyOreBlock extends RubiesModElements.ModElement {
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
-			boolean biomeCriteria = false;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("mountains")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("snowy_mountains")))
-				biomeCriteria = true;
-			if (!biomeCriteria)
-				continue;
 			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, new OreFeature(OreFeatureConfig::deserialize) {
 				@Override
 				public boolean place(IWorld world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
@@ -94,6 +80,14 @@ public class RubyOreBlock extends RubiesModElements.ModElement {
 			}.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("ruby_ore", "ruby_ore", blockAt -> {
 				boolean blockCriteria = false;
 				if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.REDSTONE_ORE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.EMERALD_ORE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.DIAMOND_ORE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.IRON_ORE.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
 			}), block.getDefaultState(), 1)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(1, 3, 3, 32))));
